@@ -41,7 +41,7 @@ Description
 	float: left;
 	margin: 46px 0 0 0;
 	text-align: left;
-	width: 350px;
+	width: 475px;
 }
 
 #container .description h1
@@ -81,7 +81,7 @@ Image
 #container .image
 {
 	float: right;
-	margin: 46px 0 0 0;
+	margin: 40px 0 0 0;
 }
 /*######################################################
 ---/ End Image
@@ -103,36 +103,36 @@ jCarousel
 
 .jcarousel-skin-portfolio .jcarousel-container-horizontal
 {
-    width: 431px;
+    width: 575px;
     padding: 20px 40px;
 	background-color: #FFFFFF;
 }
 
 .jcarousel-skin-portfolio .jcarousel-container-vertical {
-    width: 431px;
-    height: 431px;
+    width: 575px;
+    height: 575px;
     padding: 40px 20px;
 	background-color: #FFFFFF;
 }
 
 .jcarousel-skin-portfolio .jcarousel-clip-horizontal
 {
-    width:  431px;
-    height: 431px;
+    width:  575px;
+    height: 575px;
 	background-color: #FFFFFF;
 }
 
 .jcarousel-skin-portfolio .jcarousel-clip-vertical
 {
-    width:  431px;
-    height: 431px;
+    width:  575px;
+    height: 575px;
 	background-color: #FFFFFF;
 }
 
 .jcarousel-skin-portfolio .jcarousel-item
 {
-    width: 431px;
-    height: 431px;
+    width: 575px;
+    height: 575px;
 	background-color: #FFFFFF;
 }
 
