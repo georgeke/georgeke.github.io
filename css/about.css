@@ -21,7 +21,7 @@ About Content
 ##################################################### */
 #container .aboutContent
 {
-	margin: 54px 0 0 0;
+	margin: 50px 0 0 0px;
 	text-align: left;
 }
 /*######################################################
@@ -39,13 +39,13 @@ Description
 #container .aboutContent .description
 {
 	float: left;
-	width: 475px;
+	width: 600px;
 }
 
 #container .aboutContent .description h1
 {
 	margin: 0;
-	padding: 0 0 5px 0;
+	padding: 0 0 5px 50px;
 	font: normal 2.25em "Palatino Linotype", Times, serif;
 	color: #838383;
 	font-style: italic;
@@ -59,7 +59,7 @@ Description
 
 #container .aboutContent .description p
 {
-	margin: 20px 0 20px 0;
+	margin: 20px 0 20px 50px;
 	font: normal 0.7em "Times New Roman", Times, serif;
 	line-height: 1.5em;
 }
@@ -93,7 +93,7 @@ Image
 #container .aboutContent .image
 {
 	float: right;
-	margin: 0 10px 0 0;
+	margin: 25px 50px 0 0;
 }
 /*######################################################
 ---/ End Description

@@ -28,10 +28,11 @@ Contact Content
 #container .contactContent h1
 {
 	margin: 0;
-	padding: 0 0 5px 0;
-	font: normal 3em "Palatino Linotype", Times, serif;
+	padding: 0 0 10px 0;
+	font: normal 2.2em "Palatino Linotype", Times, serif;
 	color: #807873;
 	font-style: italic;
+	text-align: center;
 }
 
 #container .contactContent .labelSmall
@@ -55,11 +56,12 @@ Contact Content
 
 #container .contactContent p
 {
-	margin: 75px 0 20px 250px;
+	margin: 75px 0 20px 0px;
 	font: normal 1.2em "Times New Roman", Times, serif;
 	line-height: 2em;
 	font-style: italic;
 	font-weight: 550;
+	text-align: center;
 }
 
 #container .contactContent a,
