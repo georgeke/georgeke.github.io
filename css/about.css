@@ -46,3 +46,7 @@ article div {
     line-height: 1.5em;
     text-align: left;
 }
+
+article h1 {
+    text-align: center;
+}

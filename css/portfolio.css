@@ -1,190 +1,29 @@
-/*######################################################
-Portfolio Content
-##################################################### */
-#container .portfolioContent
-{
-	margin: 14px 0 0 0;
+/* Projects */
+article {
+    text-align: center;
+}
+
+article section {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 850px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+h1, h2 {
 	text-align: left;
 }
-/*######################################################
----/ End Portfolio Content
-##################################################### */
 
-
-
-
-
-/* #######################################################
-Grey Separator
-####################################################### */
-#container .greySeparator
-{
-	clear: both;
-	margin: 46px 0 0 0;
-	height: 1px;
-	background-color: #838383;
-}
-/* #######################################################
----/ End Grey Separator
-####################################################### */
-
-
-
-
-
-
-/*######################################################
-Description
-##################################################### */
-#container .description
-{
+article img, article p {
 	float: left;
-	margin: 46px 0 0 0;
-	text-align: left;
-	width: 475px;
+	margin-bottom: 20px;
 }
 
-#container .description h1
-{
-	font: normal 1.5em "Palatino Linotype", Times, serif;
-	color: #838383;
-	font-weight:bold;
-}
-
-#container .description h2
-{
-	padding: 0 0 10px 0;
-	font: normal 0.65em "Times New Roman", Times, serif;
-	color: #838383;
-	font-style: italic;
-	border-bottom: 2px solid #da470e;
-}
-
-#container .description p
-{
-	margin: 20px 0 20px 0;
-	font: normal 0.65em "Times New Roman", Times, serif;
-	color: #373431;
-	line-height: 1.5em;
-}
-
-#container .description a,
-#container .description a:link,
-#container .description a:active,
-#container .description a:visited
-{
-	font-style: normal;
-	color: #e97004;
-	text-decoration: none;
-}
-/*######################################################
----/ End Description
-##################################################### */
-
-
-
-
-
-/*######################################################
-Image
-##################################################### */
-#container .image
-{
-	float: right;
-	margin: 40px 0 0 0;
-}
-/*######################################################
----/ End Image
-##################################################### */
-
-
-
-
-
-
-
-/*#######################################################
-jCarousel
-###################################################### */
-.jcarousel-skin-portfolio .jcarousel-container
-{
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-container-horizontal
-{
-    width: 575px;
-    padding: 20px 40px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-container-vertical {
-    width: 575px;
-    height: 575px;
-    padding: 40px 20px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-clip-horizontal
-{
-    width:  575px;
-    height: 575px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-clip-vertical
-{
-    width:  575px;
-    height: 575px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-item
-{
-    width: 575px;
-    height: 575px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-item-horizontal
-{
-    margin-right: 10px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-item-vertical
-{
-    margin-bottom: 10px;
-	background-color: #FFFFFF;
-}
-
-.jcarousel-skin-portfolio .jcarousel-item-placeholder
-{
-	background-color: #FFFFFF;
-    color: #000;
-}
-
-/**
- *  Horizontal Buttons
- */
-.jcarousel-skin-portfolio .jcarousel-next-horizontal
-{
-    position: absolute;
-    top: 285.5px;
-    right: -10px;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    background: transparent url("../images/portfolio_next.jpg") no-repeat 0 0;
-}
-
-.jcarousel-skin-portfolio .jcarousel-prev-horizontal
-{
-    position: absolute;
-    top: 285.5px;
-    left: -10px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    background: transparent url("../images/portfolio_previous.jpg") no-repeat 0 0;
+article img {
+	-webkit-box-shadow: 3px 3px 1px #7C7C7C;
+    box-shadow: 3px 3px 1px #7C7C7C;
+	max-width: 421px;
+	max-height: 421px;
+	margin-right: 20px;
 }
