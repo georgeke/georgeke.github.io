@@ -45,15 +45,38 @@ article img.shadow {
 }
 
 .shadow {
-	-webkit-box-shadow: 3px 3px 1px #7C7C7C;
-    box-shadow: 3px 3px 1px #7C7C7C;
+	-webkit-box-shadow: 1px 1px 1px #7C7C7C;
+    box-shadow: 1px 1px 1px #7C7C7C;
 }
 
 .desc {
 	float: left;
 	max-width: 389px;
-	max-height: 421px;
+	height: 421px;
 	display: inline-block;
 	box-sizing:border-box;
+	padding-right: 20px;
+	position: relative;
+}
+
+.g-community {
+	float: left;
+	margin-bottom: 10px;
+}
+
+.bottom {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+div.bottom span, div.bottom a {
+	float: left;
+}
+
+div.bottom span {
+	line-height: 64px;
+	font-size: 20px;
 	padding-right: 20px;
 }

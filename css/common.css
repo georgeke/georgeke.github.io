@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+html {
+    overflow-y:scroll;
+}
+
 nav *, span {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
