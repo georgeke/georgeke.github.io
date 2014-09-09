@@ -50,3 +50,9 @@ article div {
 article h1 {
     text-align: center;
 }
+
+#dropboxLogo {
+    width: 40px;
+    line-height: 50px;
+    bottom: 0;
+}
