@@ -59,6 +59,11 @@ article img.shadow {
 	position: relative;
 }
 
+.g-community {
+	float: left;
+	margin-bottom: 10px;
+}
+
 #googleBadge {
 	padding-right: 89px; 
 	padding-bottom: 20px; 
