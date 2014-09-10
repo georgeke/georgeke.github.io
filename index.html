@@ -7,9 +7,10 @@
     <meta text="utf-8">
     <link href="css/common.css" type="text/css" rel="stylesheet" />
     <link href="css/about.css" type="text/css" rel="stylesheet" />
+    <script src="js/headerGen.js"></script>
 </head>
 
-<body>
+<body onload="setWelcomeHeader();">
 
 <nav>
     <div>
@@ -24,16 +25,16 @@
 
 <header>
     <div>
-        <span id="welcome">What's poppin'?</span>
+        <span id="welcome"></span>
         <span id="profile"><img id="profile" src="img/profile.png" alt="hey!"></span>
     </div>
 </header>
 
 <article>
     <div>
-        <p>I'm an undergraduate student at the University of Waterloo, currently in my 2A term for Honors Computer Science</p>
-        <p>Amongst many interests, programming and developing are my most passionate. Feel free to explore my various projects and achievements on this site.</p>
-        <p>Also, check out my <a href="https://github.com/georgeke/" alt="myGithub">Github page</a>.</p>
+        <p>I'm an undergraduate student at the University of Waterloo, currently in my 2A term for Honors Computer Science.</p>
+        <p>Amongst many interests, developing software and solving practical issues are my most passionate. Feel free to explore my various projects and achievements on this site.</p>
+        <p>Also, check out my <a href="https://github.com/georgeke/" alt="myGithub" target="_blank">Github page</a>.</p>
     </div>
     <div>
         <h1><a href="https://www.dropbox.com/s/gaebool1ileeprh/GeorgeKe_Resume.doc?dl=0" target="_blank" alt="resume!!"><img src="img/brand/dropbox-4096-black.png" alt="db" id="dropboxLogo">View Resume</a></h1>

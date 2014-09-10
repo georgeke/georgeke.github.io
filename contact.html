@@ -7,9 +7,10 @@
   <meta text="utf-8">
   <link href="css/common.css" type="text/css" rel="stylesheet" />
   <link href="css/contact.css" type="text/css" rel="stylesheet" />
+  <script src="js/headerGen.js"></script>
 </head>
 
-<body>
+<body onload="setContactHeader();">
 
 <nav>
     <div>
@@ -23,9 +24,7 @@
 </nav>
 
 <header>
-    <span>
-        Drop me a line!
-    </span>
+    <span id="contact"></span>
 </header>
 
 <article>
