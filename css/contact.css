@@ -19,6 +19,7 @@ article {
 article section {
     box-sizing: border-box;
     padding: 40px;
+    padding-bottom: 0px;
     width: 850px;
     display: inline-block;
 }

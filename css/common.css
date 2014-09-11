@@ -94,6 +94,6 @@ footer {
 
 footer div {
     font-size: 11px;
-    float: right;
+    text-align: right;
     width: 850px;
 }
