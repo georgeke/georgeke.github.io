@@ -6,7 +6,7 @@ article {
 }
 
 article section {
-	background-color: rgb(236, 240, 241);
+	background-color: rgb(240, 240, 240);
 	display: inline-block;
 	width: 850px;
 	padding-top: 10px;
@@ -14,10 +14,16 @@ article section {
 	margin-bottom: 30px;
 	border-right: 1px solid rgb(168, 168, 168);
     border-bottom: 1px solid rgb(168, 168, 168);
+    border-radius: 10px;
 }
 
 p {
 	text-align: left;
+}
+
+h1 {
+	font-size: 40px;
+	font-weight: 100;
 }
 
 p, h2 {
@@ -65,8 +71,8 @@ article img.shadow {
 }
 
 #googleBadge {
-	padding-right: 89px; 
-	padding-bottom: 20px; 
+	padding-right: 89px;
+	padding-bottom: 20px;
 	float: left;
 }
 

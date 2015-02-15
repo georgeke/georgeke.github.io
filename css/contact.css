@@ -12,7 +12,6 @@ header span {
 
 /* Contact Info */
 article {
-    background-color: rgb(236, 240, 241);
     text-align: center;
 }
 
@@ -26,7 +25,7 @@ article section {
 
 article div {
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 article img {

@@ -16,18 +16,13 @@ nav *, span {
     user-select: none;
 }
 
-header, article, nav {
-    border-bottom: 1px solid rgb(168, 168, 168);
+nav, article {
+    /*box-shadow: 0 4px 2px -2px gray;*/
 }
 
 div a, p, h1, h2, span, footer {
     font-family: "Segoe UI";
     color: rgb(26, 26, 26);
-}
-
-h1 {
-    font-size: 35px;
-    font-weight: 400;
 }
 
 h2 {
@@ -49,7 +44,6 @@ nav {
     text-align: center;
     padding: 20px;
     box-sizing: border-box;
-    background-color: rgb(236, 240, 241);
     height: 110px;
 }
 
@@ -58,11 +52,25 @@ nav div {
     min-width: 850px;
 }
 
+ul {
+    list-style-type: none;
+    background-color: white;
+    float: right;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ul li {
+    display: inline;
+    padding: 14px;
+}
+
 a#home {
     display: block;
-    font-size: 35px;
+    font-size: 40px;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 200;
     float: left;
 }
 
@@ -70,13 +78,12 @@ a#home:hover {
     color: rgb(26, 26, 26);
 }
 
-nav a, nav span {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 60px;
+nav ul li a {
+    letter-spacing: 0.013em;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 50px;
     text-decoration: none;
-    padding: 5px;
-    float: right;
 }
 
 nav span {

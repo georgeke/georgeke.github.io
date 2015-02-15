@@ -2,7 +2,7 @@ function setWelcomeHeader() {
 	var msgs = ["Hey!", "Welcome!", "Salutations!", "What's poppin'?"];
 	var rand = Math.floor(Math.random() * msgs.length);
 
-	document.getElementById("welcome").innerText = msgs[rand];
+	//document.getElementById("welcome").innerText = msgs[rand];
 }
 
 function setContactHeader() {

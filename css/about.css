@@ -1,69 +1,53 @@
-/* Banner */
-header {
-    background-color: white;
-    text-align: center;
-    height: 200px;
-    overflow: hidden;
-    /*transition: height 2s, transform 2s;*/
-}
-
-/*
-header:hover {
-    height: 200px;
-}*/
-
-header div {
-    overflow: hidden;
-    width: 850px;
-    display: inline-block;
-}
-
-header span#welcome {
-    font-weight: 100;
-    font-size: 43px;
-    width: 60%;
-    line-height: 200px;
-    float: left;
-}
-
-header span#profile {
-    height: 200px;
-    width: 40%;
-    float: right;
-    padding: 0;
-}
-
-header img {
-    position:relative;
-    max-height: 300px;
-    bottom: 35px;
-    height: auto;
-}
-
 /* Info */
 article {
-    background-color: rgb(236, 240, 241);
+    height: 500px;
     text-align: center;
+    overflow: hidden;
 }
 
 article p {
     padding-bottom: 10px;
 }
 
-article div {
+article #about {
     box-sizing: border-box;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 850px;
     line-height: 1.5em;
     text-align: left;
 }
 
+article #profile {
+    float: left;
+    padding: 0;
+    overflow: hidden;
+    max-width: 50%;
+    display: inline;
+    max-height: 400px;
+}
+
+article #desc {
+    background-color: white;
+    width: 50%;
+    padding: 20px;
+    float: right;
+}
+
 article h1 {
+    margin-top: 20px;
     text-align: center;
+    padding-bottom: 10px;
+}
+
+article h1 a {
+    padding-right: 67px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 #dropboxLogo {
-    width: 40px;
+    width: 25px;
     line-height: 50px;
     bottom: 0;
 }
