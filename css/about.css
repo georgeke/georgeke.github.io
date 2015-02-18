@@ -25,6 +25,7 @@ article #profile {
     max-width: 50%;
     display: inline;
     max-height: 400px;
+    pointer-events: none;
 }
 
 article #desc {

@@ -16,10 +16,6 @@ nav *, span {
     user-select: none;
 }
 
-nav, article {
-    /*box-shadow: 0 4px 2px -2px gray;*/
-}
-
 div a, p, h1, h2, span, footer {
     font-family: "Segoe UI";
     color: rgb(26, 26, 26);
@@ -34,7 +30,6 @@ a {
     text-decoration: none;
     font-weight: bold;
 }
-
 a:hover {
     color: rgb(37, 116, 169);
 }

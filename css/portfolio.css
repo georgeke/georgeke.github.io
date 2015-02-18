@@ -37,12 +37,10 @@ h2 {
 article img {
 	float: left;
 	margin-bottom: 20px;
-}
-
-article img {
 	max-width: 411px;
 	max-height: 411px;
 	margin-right: 100%;
+    cursor:url(../img/zoom.cur), -moz-zoom-in;
 }
 
 article img.shadow {
