@@ -34,7 +34,7 @@ h2 {
 	font-style: italic;
 }
 
-article img {
+article img.projectImg {
 	float: left;
 	margin-bottom: 20px;
 	max-width: 411px;
