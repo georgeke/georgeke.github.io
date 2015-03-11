@@ -17,7 +17,7 @@ nav *, span {
 }
 
 div a, p, h1, h2, span, footer {
-    font-family: "Segoe UI";
+    font-family: 'Segoe UI', 'Lucida Mac', 'Calibri', 'Helvetica Neue', sans-serif;
     color: rgb(26, 26, 26);
 }
 
