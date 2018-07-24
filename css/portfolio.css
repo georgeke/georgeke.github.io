@@ -6,15 +6,12 @@ article {
 }
 
 article section {
-	background-color: rgb(240, 240, 240);
-	display: inline-block;
-	width: 850px;
-	padding-top: 10px;
-	padding-bottom: 25px;
-	margin-bottom: 30px;
-	border-right: 1px solid rgb(168, 168, 168);
-    border-bottom: 1px solid rgb(168, 168, 168);
-    border-radius: 10px;
+    text-align: left;
+    display: inline-block;
+    width: 850px;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 p {
@@ -22,71 +19,47 @@ p {
 }
 
 h1 {
-	font-size: 40px;
-	font-weight: 100;
+    font-size: 40px;
+    font-weight: 100;
+}
+
+h1 a img {
+    height: 35px;
 }
 
 p, h2 {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
+    font-weight: 200;
 }
 
-h2 {
-	font-style: italic;
+#rip {
+    font-size: 10px;
 }
 
 article img.projectImg {
-	float: left;
-	margin-bottom: 20px;
-	max-width: 411px;
-	max-height: 411px;
-	margin-right: 100%;
+    float: left;
+    margin-bottom: 20px;
+    max-width: 411px;
+    max-height: 411px;
+    margin-right: 100%;
     cursor:url(../img/zoom.cur), -moz-zoom-in;
 }
 
 article img.shadow {
-	margin-right: 20px;
-	margin-left: 20px;
-}
-
-.shadow {
-	-webkit-box-shadow: 1px 1px 1px #7C7C7C;
-    box-shadow: 1px 1px 1px #7C7C7C;
+    margin-right: 20px;
 }
 
 .desc {
-	float: left;
-	max-width: 389px;
-	height: 421px;
-	display: inline-block;
-	box-sizing:border-box;
-	padding-right: 20px;
-	position: relative;
+    float: left;
+    max-width: 389px;
+    height: 421px;
+    display: inline-block;
+    box-sizing:border-box;
+    padding-right: 20px;
+    position: relative;
 }
 
 .g-community {
 	float: left;
 	margin-bottom: 10px;
-}
-
-#googleBadge {
-	padding-right: 89px;
-	padding-bottom: 20px;
-	float: left;
-}
-
-.bottom {
-	display: inline-block;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-}
-
-div.bottom span, div.bottom a {
-	float: left;
-}
-
-div.bottom span {
-	line-height: 64px;
-	font-size: 20px;
-	padding-right: 20px;
 }
