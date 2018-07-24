@@ -2,7 +2,7 @@
 article {
     height: 500px;
     text-align: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 article p {
@@ -24,7 +24,7 @@ article #profile {
     overflow: hidden;
     max-width: 50%;
     display: inline;
-    max-height: 400px;
+    max-height: 370px;
     pointer-events: none;
 }
 

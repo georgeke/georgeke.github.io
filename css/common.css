@@ -7,7 +7,7 @@ html {
     overflow-y:scroll;
 }
 
-nav *, span {
+nav * {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -16,86 +16,64 @@ nav *, span {
     user-select: none;
 }
 
-div a, p, h1, h2, span, footer {
+div a, p, h1, h2, footer {
     font-family: 'Segoe UI', 'Lucida Mac', 'Calibri', 'Helvetica Neue', sans-serif;
     color: rgb(26, 26, 26);
 }
 
-h2 {
-    font-size: 18px;
-    font-weight: 400;
-}
-
 a {
     text-decoration: none;
-    font-weight: bold;
 }
 a:hover {
-    color: rgb(37, 116, 169);
+    color: goldenrod;
 }
 
 /* Navigation */
 nav {
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 110px;
-}
-
-nav div {
-    display: inline-block;
-    min-width: 850px;
-}
-
-ul {
-    list-style-type: none;
-    background-color: white;
-    float: right;
-    padding: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-ul li {
-    display: inline;
-    padding: 14px;
-}
-
-a#home {
-    display: block;
-    font-size: 40px;
-    text-decoration: none;
-    font-weight: 200;
     float: left;
+    text-align: left;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 50px;
+    padding: 20px;
+    height: 100%;
+    width: 220px;
+    min-height: 400px;
 }
 
-a#home:hover {
-    color: rgb(26, 26, 26);
+.nav-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
 }
 
-nav ul li a {
-    letter-spacing: 0.013em;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 50px;
-    text-decoration: none;
+nav ul {
+    list-style: none;
 }
 
-nav span {
-    font-weight: 400;
-    font-size: 18px;
-    padding-bottom: 0px;
+#home {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 500;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    height: 30px;
-    padding: 10px;
+.menu li {
+    display: block;
+    margin-top: 7px;
 }
 
-footer div {
-    font-size: 11px;
-    text-align: right;
-    width: 850px;
+.contacts {
+    margin: 5px;
+    margin-top: 220px;
+}
+
+.contacts li {
+    display: inline;
+}
+
+.contacts img {
+    width: 20px;
+    margin-right: 3px;
 }
