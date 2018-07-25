@@ -1,0 +1,8 @@
+{
+  "name": "georgeke.github.io",
+  "version": "1.0.0",
+  "description": "georgeke.github.io",
+  "devDependencies": {
+    "mustache": "^2.3.0"
+  }
+}
