@@ -1,7 +1,7 @@
 /* General */
 * {
     margin: 0 auto;
-    font-family: 'Segoe UI', 'Lucida Mac', 'Calibri', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI', 'Lucida Mac', 'Calibri', 'Bodoni', sans-serif;
     color: rgb(26, 26, 26);
 }
 
@@ -16,9 +16,6 @@ nav * {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-* {
 }
 
 nav a {
