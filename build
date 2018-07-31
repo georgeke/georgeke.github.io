@@ -1,4 +1,0 @@
-#!/bin/bash
-for i in index portfolio resume photos; do
-    mustache -p templates/nav.mustache dataView.json templates/$i.mustache $i.html
-done
