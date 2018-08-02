@@ -6,7 +6,7 @@
     <title>George Ke</title>
     <meta text="utf-8">
     <link href="assets/css/common.css" type="text/css" rel="stylesheet" />
-    <link href="assets/css/photos.css" type="text/css" rel="stylesheet" />
+    <link href="assets/css/blog.css" type="text/css" rel="stylesheet" />
     <link rel="shortcut icon" href="assets/img/gitpp.png">
 </head>
 
@@ -16,7 +16,10 @@
 
 <article>
     {{#posts}}
-    <h1>{{title}}</h1>
+    <div>
+        <a href="blog/{{id}}.html"><img src="assets/img/blog/{{id}}.jpg"></a>
+        <h1><a href="blog/{{id}}.html">{{title}}</a></h1>
+    </div>
     {{/posts}}
 </article>
 

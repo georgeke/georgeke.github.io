@@ -22,10 +22,9 @@
         { "file": "20.jpg" }
     ],
     "posts": [
-        { "title": "Top Lakes in Banff & Jasper" },
-        { "title": "Top Waterfalls in Banff & Jasper" },
-        { "title": "Top Taylor Swift Albums" },
-        { "title": "Top 10 Ghirardelli Chocolate Flavours" },
-        { "title": "Top 10 Ghirardelli Chocolate Flavours" }
+        {
+            "title": "Top Aquatic Attractions in Banff & Jasper",
+            "id": "01_banff_jasper"
+        }
     ]
 }

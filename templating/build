@@ -1,6 +1,12 @@
 #!/bin/bash
 for file in templates/*.mustache; do
-    file="$(basename $file)"
-    name="$(cut -d'.' -f1 <<<"$file")"
-    mustache -p templates/partials/nav.mustache dataView.json templates/$name.mustache ../$name.html
+    base_file="$(basename $file)"
+    name="$(cut -d'.' -f1 <<<"$base_file")"
+    mustache -p templates/partials/nav.mustache dataView.json $file ../$name.html
+done
+
+for file in templates/blog/*.mustache; do
+    base_file="$(basename $file)"
+    name="$(cut -d'.' -f1 <<<"$base_file")"
+    mustache -p templates/partials/nav.mustache dataView.json $file ../blog/$name.html
 done
