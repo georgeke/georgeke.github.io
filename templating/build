@@ -8,5 +8,5 @@ done
 for file in templates/blog/*.mustache; do
     base_file="$(basename $file)"
     name="$(cut -d'.' -f1 <<<"$base_file")"
-    mustache -p templates/partials/nav.mustache dataView.json $file ../blog/$name.html
+    mustache -p templates/partials/nav_blog.mustache dataView.json $file ../blog/$name.html
 done

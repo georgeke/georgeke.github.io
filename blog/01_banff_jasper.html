@@ -5,9 +5,13 @@
 <head>
     <title>George Ke</title>
     <meta text="utf-8">
-    <link href="/assets/css/common.css" type="text/css" rel="stylesheet" />
-    <link href="/assets/css/blog_1.css" type="text/css" rel="stylesheet" />
-    <link rel="shortcut icon" href="/assets/img/gitpp.png">
+    <link href="../assets/css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/blog_1.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/lightbox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../assets/img/gitpp.png">
+    <script src="../assets/js/jquery-1.11.0.min.js"></script>
+    <script src="../assets/js/lightbox.min.js"></script>
+    <script src="../assets/js/blog_1.js"></script>
 </head>
 
 <body>
@@ -17,35 +21,35 @@
         <ul class="menu">
             <li id="home">GEORGE KE</li>
             <li>
-                <a href="index.html">HOME</a>
+                <a href="../index.html">HOME</a>
             </li>
             <li>
-                <a href="portfolio.html">PROJECTS</a>
+                <a href="../portfolio.html">PROJECTS</a>
             </li>
             <li>
-                <a href="resume.html">RESUME</a>
+                <a href="../resume.html">RESUME</a>
             </li>
             <li>
-                <a href="photos.html">PHOTOS</a>
+                <a href="../photos.html">PHOTOS</a>
             </li>
             <li>
-                <a href="blog.html">BLOG</a>
+                <a href="../blog.html">BLOG</a>
             </li>
         </ul>
         <ul class="contacts">
             <li>
                 <a href="mailto:georgekeee@gmail.com">
-                    <img src="/assets/img/brand/mail.png" alt="email">
+                    <img src="../assets/img/brand/mail.png" alt="email">
                 </a>
             </li>
             <li>
                 <a href="https://www.linkedin.com/profile/view?id=47594800" target="_blank">
-                    <img src="/assets/img/brand/linkedin.png" alt="linkedin">
+                    <img src="../assets/img/brand/linkedin.png" alt="linkedin">
                 </a>
             </li>
             <li>
                 <a href="https://github.com/georgeke" target="_blank">
-                    <img src="/assets/img/brand/github.png" alt="github">
+                    <img src="../assets/img/brand/github.png" alt="github">
                 </a>
             </li>
         </ul>
@@ -53,6 +57,173 @@
 </nav>
 
 <article>
+I went to Banff, Jasper, and a little bit of Yoho this summer. Here are the noteworthy attractions rated based on some metrics I've defined. Based on the metrics and the weight you assign to them, a ranking of these attractions are generated. The default weighting is my personal preference.
+
+<div id="preferences">
+    <p>Quality of the best view</p>
+    <span>less important</span>
+    <input type="range" name="view" min="1" max="5" step="1" value="3"/>
+    <span>more important</span>
+    <p>Overall experience, things to do</p>
+    <span>less important</span>
+    <input type="range" name="exp" min="1" max="5" step="1" value="3"/>
+    <span>more important</span>
+    <p>Uncrowded; space to enjoy</p>
+    <span>less important</span>
+    <input type="range" name="space" min="1" max="5" step="1" value="4"/>
+    <span>more important</span>
+    <p>Easy access, no long hikes</p>
+    <span>less important</span>
+    <input type="range" name="access" min="1" max="5" step="1" value="2"/>
+    <span>more important</span>
+    <p>Affordability</p>
+    <span>less important</span>
+    <input type="range" name="price" min="1" max="5" step="1" value="2"/>
+    <span>more important</span>
+    <button class="rank" type="button" onclick="rank()">Rank</button>
+</div>
+
+<ol id="places">
+    <li data-view="3" data-exp="4" data-space="1" data-access="2" data-price="5">
+        <h1>Johnston Canyon (Banff)</h1>
+        <a href="../assets/img/blog/01_banff_jasper_johnston.png" data-lightbox="johnston">
+            <img src="../assets/img/blog/01_banff_jasper_johnston.png" class="shadow projectImg">
+        </a>
+        <p>This is a pretty popular tourist spot with a straightforward hiking trail and two waterfalls along the way.</p>
+        <div>
+            <h2>The View: 3/5</h2>
+            The lower falls are far from the viewing site, and the water is not very powerful. The upper falls has a nice upper viewing area where you can see the drop from above.
+
+            <h2>The Experience 4/5</h2>
+            The hiking trails are well paved and the trail to the upper falls are interesting. There are smaller waterfalls along the way as well and you can walk through rocky canyons where rivers run through. There is a cafe at the trailhead as well as a Parks Canada stand where they talk about wolf packs.
+
+            <h2>The Space 1/5</h2>
+            The viewing areas are narrow bridges that extend over the canyon rivers. When it's crowded, it makes it very hard to see the falls if you're not at the end of the bridge. At the upper falls we had to wait 20 minutes in line to see the waterfall, and you can't stay for that long since there are people waiting for the only spot to see the view.
+
+            <h2>Accessibility 2/5</h2>
+            Takes around 15 minutes to walk to the lower canyon and 45 minutes to walk to the upper canyon.
+
+            <h2>Affordability 5/5</h2>
+            It's free.
+        </div>
+    </li>
+    <li data-view="5" data-exp="4" data-space="4" data-access="3" data-price="5">
+        <h1>Lake Louise (Banff)</h1>
+        <a href="../assets/img/blog/01_banff_jasper_louise.jpg" data-lightbox="louise">
+            <img src="../assets/img/blog/01_banff_jasper_louise.jpg" class="shadow projectImg">
+        </a>
+        <p>Lake Louise is a hamlet known for its turquoise, glacier-fed lake ringed by high peaks and overlooked by a stately chateau.</p>
+        <div>
+            <h2>The View: 5/5</h2>
+            Trees, mountains, snow caps, and the lake. Depending on the lighting and time of year, the lake can be a milky blue or it could be reflective. Both look great.
+
+            <h2>The Experience 4/5</h2>
+            Overpriced canoe rentals available at 120$ an hour. There are multiple hiking trails available, including a flat hike to a beach. There's also a small gift shop.
+
+            <h2>The Space 4/5</h2>
+            Even when it's crowded there is a large perimeter around the lake to have an unobstructed view.
+
+            <h2>Accessibility 3/5</h2>
+            Parking can be a big issue if you go around noon.
+
+            <h2>Affordability 5/5</h2>
+            It's free.
+        </div>
+    </li>
+    <li data-view="5" data-exp="2" data-space="5" data-access="3" data-price="5">
+        <h1>Takakkaw Falls (Yoho)</h1>
+        <a href="../assets/img/blog/01_banff_jasper_takkakaw.jpg" data-lightbox="takakkaw">
+            <img src="../assets/img/blog/01_banff_jasper_takkakaw.jpg" class="shadow projectImg">
+        </a>
+        <p>This is one of the highest waterfalls in Canada.</p>
+        <div>
+            <h2>The View: 5/5</h2>
+            It's extremely ferocious and grand when looking at it up close.
+
+            <h2>The Experience 2/5</h2>
+            There's only a single angle to view the falls at. There aren't any other supplementary activities around except for this cool 3-D model of the mountain topology around Takakkaw.
+
+            <h2>The Space 5/5</h2>
+            You can walk very close to the falls themselves (including climbing a bit up the base of the cliff) along the river. This provides plenty of viewing spots both along the trail and at the base of the river.
+
+            <h2>Accessibility 3/5</h2>
+            The view is only good when you walk around the river and cross the bridge. Getting to a decent viewing spot is around a 10 minute walk. Parking is plentiful though.
+
+            <h2>Affordability 5/5</h2>
+            It's free.
+        </div>
+    </li>
+    <li data-view="3" data-exp="5" data-space="4" data-access="4" data-price="5">
+        <h1>Athabasca Falls (Jasper)</h1>
+        <a href="../assets/img/blog/01_banff_jasper_athabasca_falls.jpg" data-lightbox="athabasca-falls">
+            <img src="../assets/img/blog/01_banff_jasper_athabasca_falls.jpg" class="shadow projectImg">
+        </a>
+        <p>A rather short but powerful waterfall that cuts through tall layers of rocks.</p>
+        <div>
+            <h2>The View: 3/5</h2>
+            There are multiple marked viewing spots to look at this thick waterfall from multiple angles. You can pretty close to the water, with one area where you can get quite soaked. Not the most aesthetically pleasing waterfall, but you can follow the river down to its outlet.
+
+            <h2>The Experience 5/5</h2>
+            In addition to the falls, there are extra attractions such as the rock potholes a beach area where the waterfall drains into. This adds for a more holistic experience.
+
+            <h2>The Space 4/5</h2>
+            Some of the marked viewing spots of the falls are quite crowded.
+
+            <h2>Accessibility 4/5</h2>
+            Right by the parking lot, but the best view of the waterfall takes a 5 minute walk around. The entire area is well-paved and easy to walk on.
+
+            <h2>Affordability 5/5</h2>
+            It's free.
+        </div>
+    </li>
+    <li data-view="4" data-exp="4" data-space="5" data-access="4" data-price="2">
+        <h1>Jasper Skytram (Jasper)</h1>
+        <a href="../assets/img/blog/01_banff_jasper_jasper_skytram.jpg" data-lightbox="jasper-skytram">
+            <img src="../assets/img/blog/01_banff_jasper_jasper_skytram.jpg" class="shadow projectImg">
+        </a>
+        <p>This is the highest and longest aerial tramway located in Canada, plopping riders atop The Whistlers Mountain.</p>
+        <div>
+            <h2>The View: 4/5</h2>
+            Great sweeping view of Jasper from the observation deck. Other mountain ranges can be seen on the lookouts during the hike. There's even snow/ice at some points on the peak.
+
+            <h2>The Experience 4/5</h2>
+            The top of the skytram has a cafe, gift shop and viewing areas around it. In addition, it has a full hiking trail that offers some even better views.
+
+            <h2>The Space 5/5</h2>
+            There's plenty of viewing spots at the top of the SkyTram as well as the hiking trail.
+
+            <h2>Accessibility 4/5</h2>
+            Plenty of parking and the tram station is right by the lot. The trail is around a 1 hour hike to the top, but you can still have great views without going up.
+
+            <h2>Affordability 2/5</h2>
+            CAD$46.95 for an adult, CAD$24.95 for youth.
+        </div>
+    </li>
+    <li data-view="5" data-exp="5" data-space="3" data-access="5" data-price="1">
+        <h1>Athabasca Glacier Tour (Jasper)</h1>
+        <a href="../assets/img/blog/01_banff_jasper_glacier.jpg" data-lightbox="glacier">
+            <img src="../assets/img/blog/01_banff_jasper_glacier.jpg" class="shadow projectImg">
+        </a>
+        <p>Ride one of the 20 "Ice Explorers" in the world to walk on one of the most famous glaciers of the Columbia Icefield.</p>
+        <div>
+            <h2>The View: 5/5</h2>
+            From the Discovery Centre where you start the tour, you get a great panoramic view of the 5 notable glaciers of the Columbia Icefield. On the glacier itself there is a great 360 view of the surrounding mountains as well the as ice expanse of the glacier.
+
+            <h2>The Experience 5/5</h2>
+            The Discovery Center has an amazing gallery downstairs that features interesting facts as well as a continuous screening of the critically acclaimed short "Through Ice and Time" (19 minute runtime). There is overpriced food upstairs as well as wifi. The ride on the Ice Explorer is also great as it features interesting factoids and history about glaciers told by the driver. There's also a very steep hill that the Explorer goes down on, which feels like a rollercoaster. The glacier itself has a sizable fenced off section where you can walk around on the ice. There's a small running stream where you can fill your bottle with glacier water. It tastes pretty bad.
+
+            <h2>The Space 3/5</h2>
+            This place is super crowded during noon - especially the main floor of the Discovery Centre. The edges of the fenced area on the glacier can be crowded with people if there are many Ice Explorers arriving. 
+
+            <h2>Accessibility 5/5</h2>
+            Large parking area right by the Discovery Centre where the tour starts.
+
+            <h2>Affordability 1/5</h2>
+
+            CAD$99 for an adult, CAD$50 for youth.
+        </div>
+    </li>
+</ol>
 
 </article>
 

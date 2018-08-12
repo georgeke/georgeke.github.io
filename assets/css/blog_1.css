@@ -1,0 +1,72 @@
+#preferences {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 500px;
+}
+
+#preferences p {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#preferences span {
+    font-size: 13px;
+}
+
+#preferences input[type=range] {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.rank {
+    margin-top: 30px;
+    height: 40px;
+    width: 70px;
+    font-size: 22px;
+    border-radius: 10px;
+    display: block;
+}
+
+.showHide {
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+button:active {
+    background-color: #DDDDDD;
+}
+
+h1 {
+    display: inline-block;
+}
+
+h2 {
+    margin-top: 10px;
+    margin-bottom: 3px;
+    font-size: 18px;
+}
+
+ol img {
+    height: 300px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ol {
+   list-style: none;
+   counter-reset: item;
+}
+ol li {
+    counter-increment: item;
+    margin-bottom: 5px;
+    margin-top: 80px;
+}
+ol li:before {
+    margin-right: 10px;
+    content: counter(item);
+    font-size: 22px;
+}

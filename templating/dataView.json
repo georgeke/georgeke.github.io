@@ -26,5 +26,32 @@
             "title": "Top Aquatic Attractions in Banff & Jasper",
             "id": "01_banff_jasper"
         }
+    ],
+    "blog_1_sliders": [
+        {
+            "title": "Quality of the best view",
+            "metric": "view",
+            "default": 3
+        },
+        {
+            "title": "Overall experience, things to do",
+            "metric": "exp",
+            "default": 3
+        },
+        {
+            "title": "Uncrowded; space to enjoy",
+            "metric": "space",
+            "default": 4
+        },
+        {
+            "title": "Easy access, no long hikes",
+            "metric": "access",
+            "default": 2
+        },
+        {
+            "title": "Affordability",
+            "metric": "price",
+            "default": 2
+        }
     ]
 }
