@@ -1,3 +1,7 @@
+article div,img,button {
+    margin: 0 auto;
+}
+
 #preferences {
     margin-top: 30px;
     margin-bottom: 30px;
