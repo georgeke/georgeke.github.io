@@ -5,12 +5,11 @@ article {
     flex-direction: row;
     align-content: center;
     justify-content: space-between;
-    width: 700px;
+    width: 850px;
 }
 
 article div {
-    margin-left: 20px;
-    width: 300px;
+    width: 400px;
 }
 
 article img {
