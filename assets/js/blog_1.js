@@ -18,7 +18,6 @@ function get_total_rating(li, preference_map) {
             pref / preference_sum
         )
     });
-    console.log(final_rating)
     return final_rating;
 }
 

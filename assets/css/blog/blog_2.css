@@ -1,0 +1,54 @@
+.text-wrapper {
+    width: 65%;
+}
+@media only screen and (max-width: 1400px) {
+    .text-wrapper {
+        width: 40%;
+    }
+}
+
+
+.song {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+ol img {
+    height: 100%;
+}
+
+ol {
+    padding-left: 0;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    list-style: none;
+    counter-reset: item 11;
+}
+ol li {
+    counter-increment: item -1;
+    margin-top: 30px;
+    display: flex;
+}
+
+.img-wrapper:before {
+    display: inline-block;
+    content: counter(item);
+    font-size: 30px;
+    vertical-align: 90px;
+    width: 30px;
+    margin-right: 17px;
+    text-align: center;
+}
+.img-wrapper {
+    height: 200px;
+    margin-right: 20px;
+    display: inline-block;
+}
+
+iframe {
+    margin: 0 auto;
+    margin-top: 50px;
+    display:block;
+}

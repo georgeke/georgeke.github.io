@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>George Ke</title>
+    <meta text="utf-8">
+    <link href="../assets/css/common.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/blog/blog_2.css" type="text/css" rel="stylesheet" />
+    <link href="../assets/css/blog/blog_common.css" type="text/css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../assets/img/gitpp.png">
+</head>
+
+<body>
+
+{{> nav_blog}}
+
+<article>
+
+<p class="blogPostHeader">Top 10 Taylor Swift Songs</p>
+
+<ol>
+
+    {{#blog_2_items}}
+    <li>
+        <div class="img-wrapper">
+            <img src="../assets/img/blog/{{img}}">
+        </div>
+        <div class="text-wrapper">
+            <h1 class="song">{{title}}</h1>
+            <p class="description">{{description}}</p>
+        </div>
+    </li>
+    {{/blog_2_items}}
+</ol>
+
+<p>
+    <b>Honorable Mentions:</b> Sparks Fly, Last Kiss, White Horse, Stay Beautiful, End Game, How You Get The Girl
+</p>
+<p>I also have a Spotify playlist below for convenience:</p>
+
+<iframe src="https://open.spotify.com/embed/user/12178087906/playlist/0NXnc19U2N2bEpj9EvIJEi" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+</article>
+
+</body>
+</html>
