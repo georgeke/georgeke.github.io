@@ -59,6 +59,7 @@ nav ul {
 .menu li {
     display: block;
     margin-top: 7px;
+    font-size: 16px;
 }
 
 .contacts {
