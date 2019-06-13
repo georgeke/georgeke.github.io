@@ -15,6 +15,11 @@
     margin-bottom: 7px;
 }
 
+.description, article p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
 ol img {
     height: 100%;
 }

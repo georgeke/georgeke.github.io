@@ -1,3 +1,7 @@
+li p, li div {
+    font-size: 15px;
+}
+
 article div,img,button {
     margin: 0 auto;
 }
@@ -45,6 +49,7 @@ button:active {
 
 h1 {
     display: inline-block;
+    font-size: 22px;
 }
 
 h2 {

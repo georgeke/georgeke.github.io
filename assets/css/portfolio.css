@@ -54,6 +54,11 @@ article img.shadow {
     position: relative;
 }
 
+.desc p { 
+    margin-top: 0;
+    font-size: 15px;
+}
+
 .g-community {
     float: left;
     margin-bottom: 10px;
