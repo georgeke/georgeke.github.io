@@ -1,0 +1,3 @@
+[submodule "typeractive"]
+	path = typeractive
+	url = git@github.com:georgeke/typeractive.git
