@@ -1,3 +1,12 @@
+.opening {
+    margin-top: 30px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+}
+
 li p, li div {
     font-size: 15px;
 }
@@ -7,7 +16,7 @@ article div,img,button {
 }
 
 #preferences {
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
     text-align: center;
     width: 500px;
@@ -17,6 +26,7 @@ article div,img,button {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 18px;
+    font-weight: 300;
 }
 
 #preferences span {
@@ -33,6 +43,7 @@ article div,img,button {
     height: 40px;
     width: 70px;
     font-size: 22px;
+    font-weight: 300;
     border-radius: 10px;
     display: block;
 }
