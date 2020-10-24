@@ -1,0 +1,58 @@
+.opening {
+    margin-top: 30px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.songRow {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-weight: 300;
+}
+
+.description {
+    margin-top: 20px;
+    width: 33%;
+    font-size: 15px;
+    text-align: left;
+    text-indent: 2em;
+}
+
+.headerRow .description {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.song {
+    width: 34%;
+    font-size: 20px;
+}
+
+b {
+    font-weight: 600;
+}
+
+.albumCoverRow {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.albumCoverRow img {
+    height: 150px;
+    width: 150px;
+}
+
+.albumCover {
+    padding: 5px;
+    margin: 7px;
+    height: 150px;
+    box-shadow: 0px 0px 3px 0px gray;
+}
