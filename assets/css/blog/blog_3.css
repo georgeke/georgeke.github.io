@@ -60,6 +60,12 @@ b {
     width: 150px;
 }
 
+.albumCover iframe {
+    opacity: 0;
+    margin-top: -125px;
+    box-shadow: 0px 0px 6px 0px white;
+}
+
 .albumCover {
     padding: 5px;
     margin: 7px;
