@@ -68,9 +68,31 @@ function createGraph(csvData) {
     graphElement.css("width", GRAPH_TOTAL_WIDTH + "px");
 
     for (const row of parsedData.splice(1)){
-        pointElement = $(document.createElement("div"));
+        let pointElement = $(document.createElement("div"));
         pointElement.addClass("point");
 
+        // tooltip
+        let tooltipElement = $(document.createElement("div"));
+        tooltipElement.addClass("tooltipText");
+
+        const tooltipPublishDateString = row["firstOpenedDate"].toLocaleDateString(
+            undefined, {month: "short", day: "numeric", year: "numeric"}
+        );
+        const tooltipURLDateString = row["firstOpenedDate"].toLocaleDateString();
+        let tooltipYear = $(document.createElement("a"));
+        tooltipYear.text(tooltipPublishDateString);
+        tooltipYear.attr("href", "https://www.xwordinfo.com/Crossword?date=" + tooltipURLDateString);
+        tooltipYear.attr("target", "_blank");
+
+        const tooltipTimeSpentString = Math.round(row["timeSpentSec"] / 60) + " minutes";
+        let tooltipTimeSpent = $(document.createElement("div"));
+        tooltipTimeSpent.text(tooltipTimeSpentString);
+
+        tooltipElement.append(tooltipYear);
+        tooltipElement.append(tooltipTimeSpent);
+        pointElement.append(tooltipElement);
+
+        // plot the point
         const xSinceMin = (row["firstOpenedDate"] - minFirstOpenedDate);
         const ySinceMin = row["timeSpentSec"] - minTimeSpentSec;
 
