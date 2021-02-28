@@ -1,0 +1,55 @@
+#graph {
+    margin: 0 auto;
+    margin-top: 80px;
+    border-left: 2px solid gray;
+    border-bottom: 2px solid gray;
+    display: none;
+    position: relative;
+}
+
+.xName {
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: -70px;
+    text-align: center;
+    height: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 13px;
+}
+
+.yName {
+    position: absolute;
+    bottom: -60px;
+    text-align: center;
+    width: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 13px;
+}
+
+.yLabel {
+    position: absolute;
+    left: -40px;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 13px;
+}
+
+.xLabel {
+    position: absolute;
+    bottom: -25px;
+    user-select: none;
+    -webkit-user-select: none;
+    font-size: 13px;
+}
+
+.point {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    border-color: black;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 50%;
+}
