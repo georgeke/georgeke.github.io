@@ -2,12 +2,60 @@ $(document).ready(function(){
     $.ajax({
       url: '../assets/db/blog_4.csv',
       dataType: 'text',
-    }).done(function (data) {
-        createGraph(data)
+    }).done(function (csvData) {
+        rows = csvData.split("\r\n");
+        crosswordBlog.csvData = rows.slice(1);
+        crosswordBlog.createGraph();
+        crosswordBlog.createDayOfWeekToggles();
     });
 });
 
-function createGraph(csvData) {
+let crosswordBlog = {};
+
+crosswordBlog.mainGraphToggles = {
+    "dayOfWeek": {
+        "Mon": true,
+        "Tue": true,
+        "Wed": true,
+        "Thu": true,
+        "Fri": true,
+        "Sat": true,
+        "Sun": true,
+    }
+};
+
+crosswordBlog.DAY_OF_WEEK_TO_COLOURS = {
+    "Mon": { // green
+        "light": "#85e085",
+        "dark": "#33cc33",
+    },
+    "Tue": { // blue
+        "light": "#80bfff",
+        "dark": "#3399ff",
+    },
+    "Wed": { // yellow
+        "light": "#ffe066",
+        "dark": "#ffcc00",
+    },
+    "Thu": { // brown
+        "light": "#cc6600",
+        "dark": "#804000",
+    },
+    "Fri": { // red
+        "light": "#ff8080",
+        "dark": "#ff4d4d",
+    },
+    "Sat": { // purple
+        "light": "#ccb3ff",
+        "dark": "#9966ff",
+    },
+    "Sun": { // orange
+        "light": "#ffa366",
+        "dark": "#ff8533",
+    },
+};
+
+crosswordBlog.createGraph = function () {
     const GRAPH_TOTAL_HEIGHT = 400;
     const GRAPH_TOTAL_WIDTH = 800;
     const GRAPH_PLOT_HEIGHT = GRAPH_TOTAL_HEIGHT - 15;
@@ -17,45 +65,14 @@ function createGraph(csvData) {
     const POINT_PLOT_PADDING = 5;
     const NUM_Y_AXIS_TICKS = 4;
     const NUM_X_AXIS_TICKS = 5;
-    const DAY_OF_WEEK_TO_COLOURS = {
-      "Mon": { // green
-          "light": "#85e085",
-          "dark": "#33cc33",
-      },
-      "Tue": { // blue
-          "light": "#80bfff",
-          "dark": "#3399ff",
-      },
-      "Wed": { // yellow
-          "light": "#ffe066",
-          "dark": "#ffcc00",
-      },
-      "Thu": { // brown
-          "light": "#cc6600",
-          "dark": "#804000",
-      },
-      "Fri": { // red
-          "light": "#ff8080",
-          "dark": "#ff4d4d",
-      },
-      "Sat": { // purple
-          "light": "#ccb3ff",
-          "dark": "#9966ff",
-      },
-      "Sun": { // orange
-          "light": "#ffa366",
-          "dark": "#ff8533",
-      },
-    };
-
-    rows = csvData.split("\r\n");
+    
     let parsedData = [];
 
     let minTimeSpentSec = Infinity;
     let maxTimeSpentSec = 0;
     let minFirstOpenedDate = new Date("2300-01-01");
     let maxFirstOpenedDate = new Date("1900-01-01");
-    for (const row of rows.slice(1)){
+    for (const row of this.csvData){
         vals = row.split(",");
         if (vals.length < 9) {
             continue;
@@ -66,7 +83,11 @@ function createGraph(csvData) {
         if (timeSpentSec < 60 * 5) {
             continue;
         }
-        console.log(vals[1])
+        
+        if (!this.mainGraphToggles.dayOfWeek[vals[1]]) {
+            continue;
+        }
+
         parsedData.push(
             {
                 publishedDate: new Date(vals[0]),
@@ -92,8 +113,8 @@ function createGraph(csvData) {
     }
     const yRangeS = maxTimeSpentSec - minTimeSpentSec;
     const xRangeMs = (maxFirstOpenedDate - minFirstOpenedDate);
-    
-    graphElement = $("#graph");
+
+    let graphElement = $("#graph");
     graphElement.css("height", GRAPH_TOTAL_HEIGHT + "px");
     graphElement.css("width", GRAPH_TOTAL_WIDTH + "px");
 
@@ -135,8 +156,8 @@ function createGraph(csvData) {
             (GRAPH_PLOT_HEIGHT * ySinceMin / yRangeS + POINT_PLOT_PADDING).toString() + "px",
         );
 
-        const lightColour = DAY_OF_WEEK_TO_COLOURS[row["dayOfWeek"]]["light"];
-        const darkColour = DAY_OF_WEEK_TO_COLOURS[row["dayOfWeek"]]["dark"];
+        const lightColour = this.DAY_OF_WEEK_TO_COLOURS[row["dayOfWeek"]]["light"];
+        const darkColour = this.DAY_OF_WEEK_TO_COLOURS[row["dayOfWeek"]]["dark"];
         let borderColour = lightColour;
         let background = "none";
         if (row["solved"]) {
@@ -149,10 +170,8 @@ function createGraph(csvData) {
         }
         pointElement.css("background", background);
         pointElement.css("borderColor", borderColour);
-        
-//        if (row["dayOfWeek"] == "Fri" && row["solved"]) {
+
         graphElement.append(pointElement);
-//        }
     }
     
     const xTickSpacingMs = xRangeMs / (NUM_X_AXIS_TICKS - 1);
@@ -185,5 +204,47 @@ function createGraph(csvData) {
         graphElement.append(labelElement);
     }
 
+    let xAxis = $(document.createElement("div"));
+    xAxis.addClass("xName");
+    xAxis.text("Time Spent");
+    let yAxis = $(document.createElement("div"));
+    yAxis.addClass("yName");
+    yAxis.text("Date Started");
+    graphElement.append(xAxis, yAxis);
+
     graphElement.css("display", "block");
+};
+
+crosswordBlog.createDayOfWeekToggles = function () {
+    const dayOfWeekDict = this.mainGraphToggles.dayOfWeek;
+    let dayOfWeekToggles = $("#dayOfWeekToggles");
+
+    for (const dayOfWeek in dayOfWeekDict) {
+        let toggleContainer = $(document.createElement("span"));
+        toggleContainer.css("cursor", "pointer");
+        let toggleIcon = $(document.createElement("span"));
+        toggleIcon.addClass("dayOfWeekToggleIcon");
+        toggleIcon.css("backgroundColor", this.DAY_OF_WEEK_TO_COLOURS[dayOfWeek].dark)
+        let toggleText = $(document.createElement("span"));
+        toggleText.text(dayOfWeek);
+
+        toggleContainer.append(toggleIcon);
+        toggleContainer.append(toggleText);
+        toggleContainer.click(function () {
+            const isOn = crosswordBlog.mainGraphToggles.dayOfWeek[dayOfWeek]
+            if (isOn) {
+                toggleIcon.css("backgroundColor", "lightgray");
+                toggleText.css("color", "lightgray");
+            } else {
+                toggleIcon.css("backgroundColor", crosswordBlog.DAY_OF_WEEK_TO_COLOURS[dayOfWeek].dark);
+                toggleText.css("color", "black");
+            }
+            crosswordBlog.mainGraphToggles.dayOfWeek[dayOfWeek] = !isOn;
+            $('#graph').empty();
+            crosswordBlog.createGraph();
+        });
+        dayOfWeekToggles.append(toggleContainer);
+    }
+
+    dayOfWeekToggles.css("display", "flex");
 };

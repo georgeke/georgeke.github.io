@@ -99,3 +99,23 @@
     border-style: solid;
     border-color: transparent black transparent transparent;
 }
+
+.dayOfWeekToggleIcon {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 3px;
+}
+
+#dayOfWeekToggles {
+    display: none;
+    margin: 0 auto;
+    margin-top: 100px;
+    justify-content: space-between;
+    width: 400px;
+    height: 20px;
+    font-size: 15px;
+    user-select: none;
+    -webkit-user-select: none;
+}
