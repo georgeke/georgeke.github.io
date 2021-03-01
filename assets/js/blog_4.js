@@ -17,6 +17,36 @@ function createGraph(csvData) {
     const POINT_PLOT_PADDING = 5;
     const NUM_Y_AXIS_TICKS = 4;
     const NUM_X_AXIS_TICKS = 5;
+    const DAY_OF_WEEK_TO_COLOURS = {
+      "Mon": { // green
+          "light": "#85e085",
+          "dark": "#33cc33",
+      },
+      "Tue": { // blue
+          "light": "#80bfff",
+          "dark": "#3399ff",
+      },
+      "Wed": { // yellow
+          "light": "#ffe066",
+          "dark": "#ffcc00",
+      },
+      "Thu": { // brown
+          "light": "#cc6600",
+          "dark": "#804000",
+      },
+      "Fri": { // red
+          "light": "#ff8080",
+          "dark": "#ff4d4d",
+      },
+      "Sat": { // purple
+          "light": "#ccb3ff",
+          "dark": "#9966ff",
+      },
+      "Sun": { // orange
+          "light": "#ffa366",
+          "dark": "#ff8533",
+      },
+    };
 
     rows = csvData.split("\r\n");
     let parsedData = [];
@@ -36,7 +66,7 @@ function createGraph(csvData) {
         if (timeSpentSec < 60 * 5) {
             continue;
         }
-
+        console.log(vals[1])
         parsedData.push(
             {
                 publishedDate: new Date(vals[0]),
@@ -105,15 +135,20 @@ function createGraph(csvData) {
             (GRAPH_PLOT_HEIGHT * ySinceMin / yRangeS + POINT_PLOT_PADDING).toString() + "px",
         );
 
-        background = "none";
+        const lightColour = DAY_OF_WEEK_TO_COLOURS[row["dayOfWeek"]]["light"];
+        const darkColour = DAY_OF_WEEK_TO_COLOURS[row["dayOfWeek"]]["dark"];
+        let borderColour = lightColour;
+        let background = "none";
         if (row["solved"]) {
             if (row["checked"] || row["revealed"]) {
-                background = "darkgray";
+                background = lightColour;
             } else {
-                background = "dimgray";
+                background = darkColour;
+                borderColour = darkColour;
             }
         }
         pointElement.css("background", background);
+        pointElement.css("borderColor", borderColour);
         
 //        if (row["dayOfWeek"] == "Fri" && row["solved"]) {
         graphElement.append(pointElement);
