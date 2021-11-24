@@ -20,6 +20,17 @@
     font-weight: 300;
 }
 
+.old-blog-link {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.old-blog-link a {
+    text-decoration: none;
+}
+
 ol img {
     height: 100%;
 }
